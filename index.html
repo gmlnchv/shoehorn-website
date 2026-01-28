@@ -5,20 +5,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>shoehorn — Perfectly fit any text, anywhere.</title>
-  <meta name="description" content="A tiny Web Component that automatically scales font size to fit its container using binary search. Zero dependencies, framework agnostic." />
-  
+  <meta name="description"
+    content="A tiny Web Component that automatically scales font size to fit its container using binary search. Zero dependencies, framework agnostic." />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="shoehorn — Perfectly fit any text, anywhere." />
-  <meta property="og:description" content="A tiny Web Component that automatically scales font size to fit its container using binary search." />
+  <meta property="og:description"
+    content="A tiny Web Component that automatically scales font size to fit its container using binary search." />
   <meta property="og:image" content="/og-image.png" />
-  <meta property="og:url" content="https://shoehorn.chrctr.com" />
+  <meta property="og:url" content="https://shoehorn.chrctr.dev" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="shoehorn — Perfectly fit any text, anywhere." />
-  <meta name="twitter:description" content="A tiny Web Component that automatically scales font size to fit its container using binary search." />
+  <meta name="twitter:description"
+    content="A tiny Web Component that automatically scales font size to fit its container using binary search." />
   <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,11 +39,8 @@
   <div class="min-h-screen bg-background text-foreground font-quicksand selection:bg-black/5">
     <main class="max-w-4xl mx-auto px-6 pt-24 pb-32 flex flex-col items-center text-center">
       <div class="mb-12 hover:rotate-3 transition-transform duration-500 cursor-pointer">
-        <img
-          src="/shoehorn_illustration.png"
-          alt="Shoehorn Illustration"
-          class="w-48 h-48 md:w-64 md:h-64 object-contain"
-        />
+        <img src="/shoehorn_illustration.png" alt="Shoehorn Illustration"
+          class="w-48 h-48 md:w-64 md:h-64 object-contain" />
       </div>
 
       <div class="flex flex-col items-center gap-4 mb-12">
@@ -49,18 +55,16 @@
           Perfectly fit <span class="text-foreground/40">any text, anywhere.</span>
         </h2>
         <p class="text-xl text-foreground/60 leading-relaxed font-medium">
-          A tiny Web Component that automatically scales font size to fit its container using binary search. Zero dependencies, framework agnostic.
+          A tiny Web Component that automatically scales font size to fit its container using binary search. Zero
+          dependencies, framework agnostic.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a
-            href="https://github.com/gmlnchv/shoehorn"
-            target="_blank"
-            rel="noreferrer"
-            class="px-8 py-3 rounded-2xl bg-foreground text-background font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl"
-          >
+          <a href="https://github.com/gmlnchv/shoehorn" target="_blank" rel="noreferrer"
+            class="px-8 py-3 rounded-2xl bg-foreground text-background font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-xl">
             GitHub
           </a>
-          <code class="px-6 py-3 rounded-2xl border border-foreground/10 bg-foreground/5 font-mono text-foreground/80 font-bold">
+          <code
+            class="px-6 py-3 rounded-2xl border border-foreground/10 bg-foreground/5 font-mono text-foreground/80 font-bold">
             npm install @chrctr/shoehorn
           </code>
         </div>
@@ -74,13 +78,16 @@
             <div class="space-y-4">
               <h3 class="text-xs font-black text-foreground/30 uppercase tracking-widest mb-4 text-left">Mode</h3>
               <div class="flex flex-wrap gap-2" id="mode-buttons">
-                <button data-mode="width" class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 text-foreground/40 border-foreground/5 hover:border-foreground/10">
+                <button data-mode="width"
+                  class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 text-foreground/40 border-foreground/5 hover:border-foreground/10">
                   <span class="capitalize font-bold">width</span>
                 </button>
-                <button data-mode="height" class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 text-foreground/40 border-foreground/5 hover:border-foreground/10">
+                <button data-mode="height"
+                  class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 text-foreground/40 border-foreground/5 hover:border-foreground/10">
                   <span class="capitalize font-bold">height</span>
                 </button>
-                <button data-mode="box" class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 bg-foreground text-background border-foreground shadow-lg">
+                <button data-mode="box"
+                  class="px-4 py-2 rounded-xl text-sm transition-all duration-200 border-2 bg-foreground text-background border-foreground shadow-lg">
                   <span class="capitalize font-bold">box</span>
                 </button>
               </div>
@@ -92,22 +99,16 @@
                   <label class="text-xs font-black text-foreground/30 uppercase tracking-widest">Min Size</label>
                   <span class="text-xs font-bold text-foreground/60" id="min-size-val">16px</span>
                 </div>
-                <input
-                  type="range" min="8" max="100" value="16"
-                  id="min-size-input"
-                  class="w-full accent-foreground cursor-pointer"
-                />
+                <input type="range" min="8" max="100" value="16" id="min-size-input"
+                  class="w-full accent-foreground cursor-pointer" />
               </div>
               <div>
                 <div class="flex justify-between mb-2">
                   <label class="text-xs font-black text-foreground/30 uppercase tracking-widest">Max Size</label>
                   <span class="text-xs font-bold text-foreground/60" id="max-size-val">512px</span>
                 </div>
-                <input
-                  type="range" min="100" max="1000" value="512"
-                  id="max-size-input"
-                  class="w-full accent-foreground cursor-pointer"
-                />
+                <input type="range" min="100" max="1000" value="512" id="max-size-input"
+                  class="w-full accent-foreground cursor-pointer" />
               </div>
             </div>
           </div>
@@ -115,41 +116,49 @@
           <div class="h-px bg-foreground/5"></div>
 
           <!-- Preview -->
-          <div id="playground-preview-area" class="flex-1 w-full min-h-[500px] relative overflow-hidden bg-white/10 p-8">
-            <div id="resizable-container" class="absolute border-2 border-dashed border-foreground/10 hover:border-foreground/20 transition-colors bg-white/50 flex items-center justify-center shadow-sm" style="width: 400px; height: 250px;">
-              
+          <div id="playground-preview-area"
+            class="flex-1 w-full min-h-[500px] relative overflow-hidden bg-white/10 p-8">
+            <div id="resizable-container"
+              class="absolute border-2 border-dashed border-foreground/10 hover:border-foreground/20 transition-colors bg-white/50 flex items-center justify-center shadow-sm"
+              style="width: 400px; height: 250px;">
+
               <!-- Handles -->
-              <div class="handle n" style="position:absolute; top:-10px; left:10px; right:10px; height:20px; cursor:n-resize; z-index:10; display:flex; justify-content:center; align-items:start; padding-top:6px;">
+              <div class="handle n"
+                style="position:absolute; top:-10px; left:10px; right:10px; height:20px; cursor:n-resize; z-index:10; display:flex; justify-content:center; align-items:start; padding-top:6px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle s" style="position:absolute; bottom:-10px; left:10px; right:10px; height:20px; cursor:s-resize; z-index:10; display:flex; justify-content:center; align-items:end; padding-bottom:6px;">
+              <div class="handle s"
+                style="position:absolute; bottom:-10px; left:10px; right:10px; height:20px; cursor:s-resize; z-index:10; display:flex; justify-content:center; align-items:end; padding-bottom:6px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle e" style="position:absolute; right:-10px; top:10px; bottom:10px; width:20px; cursor:e-resize; z-index:10; display:flex; justify-content:end; align-items:center; padding-right:6px;">
+              <div class="handle e"
+                style="position:absolute; right:-10px; top:10px; bottom:10px; width:20px; cursor:e-resize; z-index:10; display:flex; justify-content:end; align-items:center; padding-right:6px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle w" style="position:absolute; left:-10px; top:10px; bottom:10px; width:20px; cursor:w-resize; z-index:10; display:flex; justify-content:start; align-items:center; padding-left:6px;">
+              <div class="handle w"
+                style="position:absolute; left:-10px; top:10px; bottom:10px; width:20px; cursor:w-resize; z-index:10; display:flex; justify-content:start; align-items:center; padding-left:6px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle ne" style="position:absolute; top:-10px; right:-10px; width:25px; height:25px; cursor:ne-resize; z-index:20; display:flex; justify-content:end; align-items:start; padding:4px;">
+              <div class="handle ne"
+                style="position:absolute; top:-10px; right:-10px; width:25px; height:25px; cursor:ne-resize; z-index:20; display:flex; justify-content:end; align-items:start; padding:4px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle nw" style="position:absolute; top:-10px; left:-10px; width:25px; height:25px; cursor:nw-resize; z-index:20; display:flex; justify-content:start; align-items:start; padding:4px;">
+              <div class="handle nw"
+                style="position:absolute; top:-10px; left:-10px; width:25px; height:25px; cursor:nw-resize; z-index:20; display:flex; justify-content:start; align-items:start; padding:4px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle se" style="position:absolute; bottom:-10px; right:-10px; width:25px; height:25px; cursor:se-resize; z-index:20; display:flex; justify-content:end; align-items:end; padding:4px;">
+              <div class="handle se"
+                style="position:absolute; bottom:-10px; right:-10px; width:25px; height:25px; cursor:se-resize; z-index:20; display:flex; justify-content:end; align-items:end; padding:4px;">
                 <div class="handle-visual"></div>
               </div>
-              <div class="handle sw" style="position:absolute; bottom:-10px; left:-10px; width:25px; height:25px; cursor:sw-resize; z-index:20; display:flex; justify-content:start; align-items:end; padding:4px;">
+              <div class="handle sw"
+                style="position:absolute; bottom:-10px; left:-10px; width:25px; height:25px; cursor:sw-resize; z-index:20; display:flex; justify-content:start; align-items:end; padding:4px;">
                 <div class="handle-visual"></div>
               </div>
 
-              <shoehorn-text
-                id="shoehorn-el"
-                contenteditable="true"
+              <shoehorn-text id="shoehorn-el" contenteditable="true"
                 class="w-full h-full flex items-center justify-center outline-none selection:bg-black/5 font-bold"
-                style="color: inherit;"
-              >
+                style="color: inherit;">
                 Resize me from any edge or corner!
               </shoehorn-text>
             </div>
